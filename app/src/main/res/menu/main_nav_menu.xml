@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miHome"
+        android:icon="@drawable/ic_fluent_home_24_selector"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/miSearch"
+        android:icon="@drawable/ic_fluent_search_24_selector"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/miProfile"
+        android:icon="@drawable/ic_fluent_person_24_selector"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/miSettings"
+        android:icon="@drawable/ic_fluent_settings_24_selector"
+        android:title="Settings" />
+</menu>

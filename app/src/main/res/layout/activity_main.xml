@@ -8,9 +8,11 @@
     tools:context=".MainActivity">
 
     <com.microsoft.fluentui.widget.BottomNavigationView
+        android:id="@+id/main_nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:background="@color/fluentui_white"
         app:menu="@menu/main_nav_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Item Category -->
+    <string name="item_category_others">Others</string>
+    <string name="item_category_food">Food</string>
+    <string name="item_category_public">Public Business</string>
+    <string name="item_category_estate">Real Estate</string>
+    <string name="item_category_telecom">Telecom</string>
+    <string name="item_category_car">Car</string>
+    <string name="item_category_school">School</string>
+    <string name="item_category_tax">Tax</string>
+    <string name="item_category_transport">Transportation</string>
+    <string name="item_category_subscribe">Subscriptions</string>
+</resources>

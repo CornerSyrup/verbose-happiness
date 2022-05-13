@@ -2,6 +2,14 @@
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/home_page">
 
+    <fragment
+        android:id="@+id/home_page"
+        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page">
+    </fragment>
 </navigation>

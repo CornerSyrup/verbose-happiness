@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Kadai01_IS14A_95049</string>
-    <string name="app_title">課題01　家計簿アプリ</string>
 
+    <string name="home_page_title">課題01　家計簿アプリ</string>
     <string name="btn_desc_register">Register items</string>
     <string name="btn_desc_detail">Review items</string>
 </resources>

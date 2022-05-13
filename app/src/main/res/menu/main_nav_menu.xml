@@ -4,15 +4,15 @@
     <item
         android:id="@+id/home_page"
         android:icon="@drawable/ic_fluent_home_24_selector"
-        android:title="@string/home_title" />
+        android:title="@string/home_menu_title" />
 
     <item
         android:id="@+id/detail_page"
         android:icon="@drawable/ic_fluent_apps_list_detail_24_selector"
-        android:title="@string/detail_title" />
+        android:title="@string/detail_menu_title" />
 
     <item
         android:id="@+id/register_page"
         android:icon="@drawable/ic_fluent_money_24_selector"
-        android:title="@string/register_title" />
+        android:title="@string/register_menu_title" />
 </menu>

@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">Kadai01_IS14A_95049</string>
-    <string name="app_title">課題01　家計簿アプリ</string>
 
+    <string name="home_page_title">課題01　家計簿アプリ</string>
     <string name="btn_desc_register">Register items</string>
     <string name="btn_desc_detail">Review items</string>
+
+    <!-- For register page -->
+    <string name="register_page_title">Register info</string>
+    <string name="register_field_date">Date</string>
+    <string name="register_lbl_year">Year</string>
+    <string name="register_lbl_month">Month</string>
+    <string name="register_lbl_day">Day</string>
+    <string name="register_lbl_item">Title</string>
+    <string name="register_lbl_cat">Category</string>
+    <string name="register_radio_in">Earning</string>
+    <string name="register_radio_out">Spending</string>
+    <string name="register_lbl_amount">Amount</string>
+    <string name="register_btn_reg">Register</string>
+    <string name="register_btn_ccl">Cancel</string>
 </resources>

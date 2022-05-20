@@ -11,5 +11,17 @@
         android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.HomePage"
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_home_to_register"
+            app:destination="@id/register_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_page"
+        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.RegisterPage"
+        android:label="fragment_register_page"
+        tools:layout="@layout/fragment_register_page">
+        <action
+            android:id="@+id/action_register_to_home"
+            app:destination="@id/home_page" />
     </fragment>
 </navigation>

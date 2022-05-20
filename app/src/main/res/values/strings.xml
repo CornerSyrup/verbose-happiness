@@ -4,6 +4,7 @@
     <string name="home_page_title">課題01　家計簿アプリ</string>
     <string name="btn_desc_register">Register items</string>
     <string name="btn_desc_detail">Review items</string>
+    <string name="common_date_separator"> / </string>
 
     <!-- For register page -->
     <string name="register_page_title">Register info</string>
@@ -18,4 +19,10 @@
     <string name="register_lbl_amount">Amount</string>
     <string name="register_btn_reg">Register</string>
     <string name="register_btn_ccl">Cancel</string>
+
+    <!-- For detail page -->
+    <string name="detail_btn_del">delete item</string>
+    <string name="detail_lbl_date">Date</string>
+    <string name="detail_lbl_cat">Category</string>
+    <string name="detail_lbl_amount">Amount</string>
 </resources>

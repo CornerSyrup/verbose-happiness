@@ -36,7 +36,7 @@
             android:layout_height="48dp"
             android:layout_margin="6dp"
             android:background="@drawable/ic_fluent_delete_24_filled"
-            android:contentDescription="delete item button"
+            android:contentDescription="@string/detail_btn_del"
             android:onClick="@{deleteCommand}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
@@ -67,7 +67,7 @@
                     style="@style/TextAppearance.FluentUI.Caption"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" / " />
+                    android:text="@string/common_date_separator" />
 
                 <TextView
                     style="@style/TextAppearance.FluentUI.Caption"
@@ -81,7 +81,7 @@
                 style="@style/TextAppearance.FluentUI.SubHeading1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date" />
+                android:text="@string/detail_lbl_date" />
 
             <TextView
                 style="@style/TextAppearance.FluentUI.Body1"
@@ -94,7 +94,7 @@
                 style="@style/TextAppearance.FluentUI.SubHeading1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Category" />
+                android:text="@string/detail_lbl_cat" />
 
             <TextView
                 style="@style/TextAppearance.FluentUI.Body1"
@@ -107,7 +107,7 @@
                 style="@style/TextAppearance.FluentUI.SubHeading1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Amount" />
+                android:text="@string/detail_lbl_amount" />
 
             <TextView
                 style="@style/TextAppearance.FluentUI.Body1"

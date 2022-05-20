@@ -21,7 +21,7 @@ class RegisterItemsAdapter(private val itemList: List<RegisterItem>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.position = position
+        holder.binding.position = position + 1 // 0-base to 1-base
         holder.binding.total = itemCount
         holder.binding.model = itemList[position]
     }

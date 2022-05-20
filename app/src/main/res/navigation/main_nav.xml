@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_home_to_register"
             app:destination="@id/register_page" />
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/detail_page" />
     </fragment>
     <fragment
         android:id="@+id/register_page"
@@ -23,5 +26,20 @@
         <action
             android:id="@+id/action_register_to_home"
             app:destination="@id/home_page" />
+        <action
+            android:id="@+id/action_register_page_to_detailPage"
+            app:destination="@id/detail_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_page"
+        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.DetailPage"
+        android:label="fragment_detail_page"
+        tools:layout="@layout/fragment_detail_page">
+        <action
+            android:id="@+id/action_detail_to_home"
+            app:destination="@id/home_page" />
+        <action
+            android:id="@+id/action_detail_to_register"
+            app:destination="@id/register_page" />
     </fragment>
 </navigation>

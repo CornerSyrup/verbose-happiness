@@ -9,6 +9,6 @@ class HomePageViewModel {
     }
 
     fun navigateToDetailPage(view: View) {
-//        view.findNavController().navigate(R.id.action_home_to_detail)
+        view.findNavController().navigate(R.id.action_home_to_detail)
     }
 }

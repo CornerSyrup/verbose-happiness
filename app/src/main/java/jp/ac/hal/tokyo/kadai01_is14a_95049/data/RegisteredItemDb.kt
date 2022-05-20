@@ -13,19 +13,19 @@ abstract class RegisteredItemDb : RoomDatabase() {
         @Volatile
         private var instance: RegisteredItemDb? = null
 
-        fun getRegisterItemDb(context: Context): RegisteredItemDb {
-            return instance ?: synchronized(this) {
-                val inst = Room.databaseBuilder(
-                    context.applicationContext,
-                    RegisteredItemDb::class.java,
-                    "registered-item-db"
-                ).allowMainThreadQueries().build()
-
-                instance = inst
-                return inst
-            }
+        fun setUpRegisterItemDb(context: Context) {
+            instance = Room.databaseBuilder(
+                context.applicationContext,
+                RegisteredItemDb::class.java,
+                "registered-item-db"
+            ).allowMainThreadQueries().build()
         }
 
+        /**
+         * Gets RegisteredItem Database.
+         * Please call setUpRegisterItemDb once before calling getRegisterItemDb.
+         * Otherwise, this method will always return null.
+         */
         fun getRegisterItemDb(): RegisteredItemDb? {
             return instance
         }

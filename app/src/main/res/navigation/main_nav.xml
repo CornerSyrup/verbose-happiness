@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/home_page"
-        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.HomePage"
+        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.ui.HomePage"
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page">
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/register_page"
-        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.RegisterPage"
+        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.ui.RegisterPage"
         android:label="fragment_register_page"
         tools:layout="@layout/fragment_register_page">
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/detail_page"
-        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.DetailPage"
+        android:name="jp.ac.hal.tokyo.kadai01_is14a_95049.ui.DetailPage"
         android:label="fragment_detail_page"
         tools:layout="@layout/fragment_detail_page">
         <action

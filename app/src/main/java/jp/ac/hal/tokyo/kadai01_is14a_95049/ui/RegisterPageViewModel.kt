@@ -1,4 +1,4 @@
-package jp.ac.hal.tokyo.kadai01_is14a_95049
+package jp.ac.hal.tokyo.kadai01_is14a_95049.ui
 
 import android.view.View
 import android.widget.CompoundButton
@@ -6,6 +6,8 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.navigation.findNavController
 import com.microsoft.fluentui.datetimepicker.DateTimePickerDialog
+import jp.ac.hal.tokyo.kadai01_is14a_95049.BR
+import jp.ac.hal.tokyo.kadai01_is14a_95049.R
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisteredItemDb
 import org.threeten.bp.Duration

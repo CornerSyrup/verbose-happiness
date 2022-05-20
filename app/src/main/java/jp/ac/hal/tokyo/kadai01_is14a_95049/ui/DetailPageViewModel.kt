@@ -1,9 +1,11 @@
-package jp.ac.hal.tokyo.kadai01_is14a_95049
+package jp.ac.hal.tokyo.kadai01_is14a_95049.ui
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import jp.ac.hal.tokyo.kadai01_is14a_95049.BR
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisteredItemDb
+import jp.ac.hal.tokyo.kadai01_is14a_95049.ui.adapter.RegisterItemsAdapter
 
 class DetailPageViewModel : BaseObservable() {
     @Bindable

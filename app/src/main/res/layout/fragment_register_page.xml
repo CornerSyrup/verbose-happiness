@@ -15,14 +15,14 @@
 
         <variable
             name="vm"
-            type="jp.ac.hal.tokyo.kadai01_is14a_95049.RegisterPageViewModel" />
+            type="jp.ac.hal.tokyo.kadai01_is14a_95049.ui.RegisterPageViewModel" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".RegisterPage">
+        tools:context=".ui.RegisterPage">
 
         <TextView
             android:layout_width="match_parent"
@@ -42,6 +42,7 @@
             android:layout_height="48dp"
             android:focusable="false"
             android:gravity="center"
+            android:importantForAutofill="no"
             android:inputType="date"
             android:onClick="@{vm::changeDate}"
             android:text="@{vm.date}" />

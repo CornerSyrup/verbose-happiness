@@ -1,7 +1,7 @@
 package jp.ac.hal.tokyo.kadai01_is14a_95049.converters
 
 import androidx.databinding.InverseMethod
-import jp.ac.hal.tokyo.kadai01_is14a_95049.ItemCategory
+import jp.ac.hal.tokyo.kadai01_is14a_95049.data.ItemCategory
 
 object ItemCategoryConverter {
     @JvmStatic

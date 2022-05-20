@@ -2,7 +2,6 @@ package jp.ac.hal.tokyo.kadai01_is14a_95049.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import jp.ac.hal.tokyo.kadai01_is14a_95049.ItemCategory
 
 @Entity(tableName = "RegisteredItems")
 data class RegisterItem(

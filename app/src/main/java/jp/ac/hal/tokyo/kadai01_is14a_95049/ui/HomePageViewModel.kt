@@ -1,7 +1,8 @@
-package jp.ac.hal.tokyo.kadai01_is14a_95049
+package jp.ac.hal.tokyo.kadai01_is14a_95049.ui
 
 import android.view.View
 import androidx.navigation.findNavController
+import jp.ac.hal.tokyo.kadai01_is14a_95049.R
 
 class HomePageViewModel {
     fun navigateToRegisterPage(view: View) {

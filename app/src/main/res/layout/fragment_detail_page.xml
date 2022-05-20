@@ -8,7 +8,7 @@
 
         <variable
             name="vm"
-            type="jp.ac.hal.tokyo.kadai01_is14a_95049.DetailPageViewModel" />
+            type="jp.ac.hal.tokyo.kadai01_is14a_95049.ui.DetailPageViewModel" />
     </data>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -18,5 +18,5 @@
         android:adapter="@{vm.adapter}"
         android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:context=".DetailPage" />
+        tools:context=".ui.DetailPage" />
 </layout>

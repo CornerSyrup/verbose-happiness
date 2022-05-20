@@ -1,4 +1,4 @@
-package jp.ac.hal.tokyo.kadai01_is14a_95049
+package jp.ac.hal.tokyo.kadai01_is14a_95049.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import jp.ac.hal.tokyo.kadai01_is14a_95049.R
+import jp.ac.hal.tokyo.kadai01_is14a_95049.data.ItemCategory
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem
 import jp.ac.hal.tokyo.kadai01_is14a_95049.databinding.FragmentRegisterPageBinding
 

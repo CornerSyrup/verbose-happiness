@@ -1,6 +1,7 @@
-package jp.ac.hal.tokyo.kadai01_is14a_95049
+package jp.ac.hal.tokyo.kadai01_is14a_95049.data
 
 import androidx.annotation.StringRes
+import jp.ac.hal.tokyo.kadai01_is14a_95049.R
 
 enum class ItemCategory(@StringRes val res: Int) {
     // その他

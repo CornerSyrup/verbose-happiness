@@ -5,6 +5,17 @@
 
     <data>
 
+        <import
+            alias="ItemCategoryConverter"
+            type="jp.ac.hal.tokyo.kadai01_is14a_95049.converters.ItemCategoryConverter" />
+
+        <import
+            alias="CurrencyConverter"
+            type="jp.ac.hal.tokyo.kadai01_is14a_95049.converters.CurrencyConverter" />
+
+        <variable
+            name="vm"
+            type="jp.ac.hal.tokyo.kadai01_is14a_95049.RegisterPageViewModel" />
     </data>
 
     <LinearLayout
@@ -16,55 +27,24 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/register_page_title" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:labelFor="@id/date_field"
             android:text="@string/register_field_date" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/date_field"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:focusable="false"
             android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:labelFor="@id/ddl_year"
-                android:text="@string/register_lbl_year" />
-
-            <Spinner
-                android:id="@+id/ddl_year"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:labelFor="@id/ddl_month"
-                android:text="@string/register_lbl_month" />
-
-            <Spinner
-                android:id="@+id/ddl_month"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:labelFor="@id/ddl_day"
-                android:text="@string/register_lbl_day" />
-
-            <Spinner
-                android:id="@+id/ddl_day"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1" />
-        </LinearLayout>
+            android:inputType="date"
+            android:onClick="@{vm::changeDate}"
+            android:text="@{vm.date}" />
 
         <TextView
             android:layout_width="match_parent"
@@ -77,7 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="@={vm.model.title}" />
 
         <TextView
             android:layout_width="match_parent"
@@ -88,7 +69,8 @@
         <Spinner
             android:id="@+id/ddl_category"
             android:layout_width="match_parent"
-            android:layout_height="48dp" />
+            android:layout_height="48dp"
+            android:selection="@={ItemCategoryConverter.toInteger(vm.model.category)}" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -101,12 +83,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:checked="@{vm.model.flow}"
+                android:onCheckedChanged="@{vm::isIncomeChanged}"
                 android:text="@string/register_radio_in" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:checked="@{!vm.model.flow}"
+                android:onCheckedChanged="@{vm::isExpenseChanged}"
                 android:text="@string/register_radio_out" />
         </RadioGroup>
 
@@ -121,7 +107,8 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:importantForAutofill="no"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:text="@={CurrencyConverter.toString(vm.model.amount)}" />
 
         <LinearLayout
             style="@style/Widget.AppCompat.ButtonBar"
@@ -133,6 +120,7 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                android:onClick="@{vm::register}"
                 android:text="@string/register_btn_reg" />
 
             <com.microsoft.fluentui.widget.Button
@@ -140,6 +128,7 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                android:onClick="@{vm::cancel}"
                 android:text="@string/register_btn_ccl" />
         </LinearLayout>
     </LinearLayout>

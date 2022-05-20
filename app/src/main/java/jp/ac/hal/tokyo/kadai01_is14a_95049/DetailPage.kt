@@ -13,10 +13,10 @@ class DetailPage : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val dataBinging: FragmentDetailPageBinding =
+        val dataBinding: FragmentDetailPageBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_detail_page, container, false)
-        return dataBinging.root.apply {
-            dataBinging.vm = DetailPageViewModel()
+        return dataBinding.root.apply {
+            dataBinding.vm = DetailPageViewModel()
         }
     }
 }

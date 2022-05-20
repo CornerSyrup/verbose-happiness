@@ -15,6 +15,10 @@
             type="Integer" />
 
         <variable
+            name="categoryString"
+            type="String" />
+
+        <variable
             name="model"
             type="jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem" />
 
@@ -96,7 +100,7 @@
                 style="@style/TextAppearance.FluentUI.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{model.category.toString()}"
+                android:text="@{categoryString}"
                 tools:text="Others" />
 
             <TextView

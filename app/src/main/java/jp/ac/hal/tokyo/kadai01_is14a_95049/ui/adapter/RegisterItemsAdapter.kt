@@ -1,5 +1,6 @@
 package jp.ac.hal.tokyo.kadai01_is14a_95049.ui.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,23 +20,31 @@ class RegisterItemsAdapter(private val itemList: MutableList<RegisterItem>) :
                 R.layout.fragment_register_item_detail_view,
                 parent, false
             )
-        return ViewHolder(dataBinding.root, dataBinding)
+        return ViewHolder(dataBinding.root, dataBinding, parent.context)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.position = position + 1 // 0-base to 1-base
-        holder.binding.total = itemCount
-        holder.binding.model = itemList[position]
-        holder.binding.deleteCommand = View.OnClickListener {
-            RegisteredItemDb.getRegisterItemDb()!!.registerItemDao() // remove from repo
-                .delete(holder.binding.model as RegisterItem)
-            itemList.removeAt(position) // remote from cache
-            notifyItemRemoved(position) // refresh
+    override fun onBindViewHolder(holder: ViewHolder, index: Int) {
+        holder.binding.apply {
+            position = index + 1
+            total = itemCount
+            model = itemList[index]
+            categoryString = holder.context.getString(itemList[index].category.res)
+
+            deleteCommand = View.OnClickListener {
+                RegisteredItemDb.getRegisterItemDb()!!.registerItemDao() // remove from repo
+                    .delete(holder.binding.model as RegisterItem)
+                itemList.removeAt(index) // remote from cache
+                notifyItemRemoved(index) // refresh
+            }
         }
     }
 
     override fun getItemCount() = itemList.size
 
-    data class ViewHolder(val itemView: View, var binding: FragmentRegisterItemDetailViewBinding) :
+    data class ViewHolder(
+        val itemView: View,
+        var binding: FragmentRegisterItemDetailViewBinding,
+        val context: Context
+    ) :
         RecyclerView.ViewHolder(itemView)
 }

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import jp.ac.hal.tokyo.kadai01_is14a_95049.databinding.FragmentHomePageBinding
 
 class HomePage : Fragment() {
@@ -17,7 +16,7 @@ class HomePage : Fragment() {
         val dataBinding: FragmentHomePageBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_home_page, container, false)
         return dataBinding.root.apply {
-            dataBinding.vm = HomePageViewModel(Navigation.findNavController(this))
+            dataBinding.vm = HomePageViewModel()
         }
     }
 }

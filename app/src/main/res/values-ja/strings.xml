@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kadai01_IS14A_95049</string>
+    <string name="item_category_others">その他</string>
+    <string name="item_category_food">食事</string>
+    <string name="item_category_public">水道光熱</string>
+    <string name="item_category_estate">不動産</string>
+    <string name="item_category_telecom">通信</string>
+    <string name="item_category_car">自動車</string>
+    <string name="item_category_school">学費</string>
+    <string name="item_category_tax">税金</string>
+    <string name="item_category_transport">交通</string>
+    <string name="item_category_subscribe">購読</string>
+    <string name="register_menu_title">登録</string>
+    <string name="detail_menu_title">詳細</string>
+    <string name="home_menu_title">ホーム</string>
+    <string name="btn_desc_register">項目を登録</string>
+    <string name="detail_lbl_amount">金額</string>
+    <string name="register_lbl_amount">金額</string>
+    <string name="register_radio_out">支出</string>
+    <string name="register_radio_in">収入</string>
+    <string name="register_lbl_cat">分類</string>
+    <string name="register_lbl_item">項目名</string>
+    <string name="register_page_title">情報登録</string>
+    <string name="register_field_date">日付</string>
+    <string name="register_btn_reg">登録</string>
+    <string name="register_btn_ccl">取り消し</string>
+    <string name="detail_btn_del">項目を削除</string>
+    <string name="detail_lbl_date">日付</string>
+    <string name="detail_lbl_cat">分類</string>
+    <string name="btn_desc_detail">項目を確認</string>
+</resources>

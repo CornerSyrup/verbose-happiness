@@ -14,7 +14,7 @@ class DetailPageViewModel : BaseObservable() {
     }
 
     val adapter: RegisterItemsAdapter
-        get() = RegisterItemsAdapter(items)
+        get() = RegisterItemsAdapter(items as MutableList)
 
     fun refresh() {
         items = RegisteredItemDb.getRegisterItemDb()!!.registerItemDao().getAllItems()

@@ -87,7 +87,9 @@
                 style="@style/TextAppearance.FluentUI.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{Integer.toString(model.year) + `/` + Integer.toString(model.month) + `/` + Integer.toString(model.day) }"
+                app:day="@{model.day}"
+                app:month="@{model.month}"
+                app:year="@{model.year}"
                 tools:text="2022 / 12 / 31" />
 
             <TextView

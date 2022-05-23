@@ -23,6 +23,14 @@
             type="jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem" />
 
         <variable
+            name="duplicateCommand"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="editCommand"
+            type="android.view.View.OnClickListener" />
+
+        <variable
             name="deleteCommand"
             type="android.view.View.OnClickListener" />
     </data>
@@ -31,15 +39,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.microsoft.fluentui.widget.Button
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="6dp"
-            android:background="@drawable/ic_fluent_delete_24_filled"
-            android:contentDescription="@string/detail_btn_del"
-            android:onClick="@{deleteCommand}"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_edt"
+                android:drawableStart="@drawable/ic_fluent_copy_add_24_regular"
+                android:onClick="@{duplicateCommand}" />
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_edt"
+                android:drawableStart="@drawable/ic_fluent_edit_24_regular"
+                android:onClick="@{editCommand}" />
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_del"
+                android:drawableStart="@drawable/ic_fluent_delete_24_regular"
+                android:onClick="@{deleteCommand}" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

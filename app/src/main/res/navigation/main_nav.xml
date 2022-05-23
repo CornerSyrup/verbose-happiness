@@ -29,6 +29,14 @@
         <action
             android:id="@+id/action_register_page_to_detailPage"
             app:destination="@id/detail_page" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="mode"
+            android:defaultValue="Create"
+            app:argType="jp.ac.hal.tokyo.kadai01_is14a_95049.ui.RegisterPageMode" />
     </fragment>
     <fragment
         android:id="@+id/detail_page"

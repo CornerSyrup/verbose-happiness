@@ -15,11 +15,15 @@
     <string name="register_radio_out">Spending</string>
     <string name="register_lbl_amount">Amount</string>
     <string name="register_btn_reg">Register</string>
+    <string name="register_btn_edt">Edit</string>
+    <string name="register_btn_dup">Duplicate</string>
     <string name="register_btn_ccl">Cancel</string>
 
     <!-- For detail page -->
     <string name="detail_btn_del">delete item</string>
+    <string name="detail_btn_edt">edit item</string>
     <string name="detail_lbl_date">Date</string>
     <string name="detail_lbl_cat">Category</string>
     <string name="detail_lbl_amount">Amount</string>
+    <string name="register_btn_cfm">Confirm</string>
 </resources>

@@ -14,7 +14,8 @@ import org.threeten.bp.Duration
 import org.threeten.bp.ZoneId
 import org.threeten.bp.ZonedDateTime
 
-class RegisterPageViewModel(val model: RegisterItem) : BaseObservable() {
+class RegisterPageViewModel(val model: RegisterItem, private val mode: RegisterPageMode) :
+    BaseObservable() {
     init {
         this.model.apply {
             ZonedDateTime.now().let {
@@ -33,6 +34,22 @@ class RegisterPageViewModel(val model: RegisterItem) : BaseObservable() {
     val date: String
         get() = "${model.year} / ${model.month} / ${model.day}"
 
+    @get:Bindable
+    val commitText: Int
+        get() = when (mode) {
+            RegisterPageMode.Create -> R.string.register_btn_reg
+            RegisterPageMode.Copy -> R.string.register_btn_dup
+            RegisterPageMode.Edit -> R.string.register_btn_edt
+        }
+
+    @get:Bindable
+    val commitCommand: View.OnClickListener
+        get() = when (mode) {
+            RegisterPageMode.Create -> View.OnClickListener { view -> register(view) }
+            RegisterPageMode.Copy -> View.OnClickListener { view -> clone(view) }
+            RegisterPageMode.Edit -> View.OnClickListener { view -> update(view) }
+        }
+
     private val modelZonedDate: ZonedDateTime
         get() = ZonedDateTime.of(
             model.year, model.month, model.day,
@@ -42,11 +59,22 @@ class RegisterPageViewModel(val model: RegisterItem) : BaseObservable() {
 
     fun register(view: View) {
         RegisteredItemDb.getRegisterItemDb()?.registerItemDao()?.insert(model)
-        view.findNavController().navigate(R.id.action_register_to_home)
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterPageToDetailPage())
+    }
+
+    fun update(view: View) {
+        RegisteredItemDb.getRegisterItemDb()?.registerItemDao()?.update(model)
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterPageToDetailPage())
+    }
+
+    fun clone(view: View) {
+        RegisteredItemDb.getRegisterItemDb()?.registerItemDao()?.insert(model.copy(id = 0))
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterPageToDetailPage())
+
     }
 
     fun cancel(view: View) {
-        view.findNavController().navigate(R.id.action_register_to_home)
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterToHome())
     }
 
     /**

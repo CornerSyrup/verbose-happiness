@@ -13,6 +13,9 @@ interface RegisterItemDao {
     @Query("SELECT * FROM RegisteredItems WHERE id in (:id)")
     fun getItemByIds(id: IntArray): List<RegisterItem>
 
+    @Query("SELECT * FROM RegisteredItems WHERE id = (:id)")
+    fun getItemById(id: Int): RegisterItem
+
     @Update
     fun update(item: RegisterItem)
 

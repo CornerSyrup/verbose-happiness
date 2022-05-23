@@ -121,8 +121,10 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
-                android:onClick="@{vm::register}"
-                android:text="@string/register_btn_reg" />
+                android:contentDescription="@string/register_btn_cfm"
+                android:onClick="@{vm.commitCommand}"
+                android:text="@{vm.commitText}"
+                tools:text="Confirm" />
 
             <com.microsoft.fluentui.widget.Button
                 style="@style/Widget.FluentUI.Button.Borderless"

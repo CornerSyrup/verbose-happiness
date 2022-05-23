@@ -12,6 +12,7 @@ import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisteredItemDb
 import jp.ac.hal.tokyo.kadai01_is14a_95049.databinding.FragmentRegisterItemDetailViewBinding
 import jp.ac.hal.tokyo.kadai01_is14a_95049.ui.DetailPageDirections
+import jp.ac.hal.tokyo.kadai01_is14a_95049.ui.RegisterPageMode
 
 class RegisterItemsAdapter(private val itemList: MutableList<RegisterItem>) :
     RecyclerView.Adapter<RegisterItemsAdapter.ViewHolder>() {
@@ -34,9 +35,16 @@ class RegisterItemsAdapter(private val itemList: MutableList<RegisterItem>) :
             model = item
             categoryString = holder.context.getString(item.category.res)
 
+            duplicateCommand = View.OnClickListener {
+                it.findNavController().navigate(
+                    DetailPageDirections.actionDetailToRegister(item.id, RegisterPageMode.Copy)
+                )
+            }
+
             editCommand = View.OnClickListener {
-                it.findNavController()
-                    .navigate(DetailPageDirections.actionDetailToRegister(item.id))
+                it.findNavController().navigate(
+                    DetailPageDirections.actionDetailToRegister(item.id, RegisterPageMode.Edit)
+                )
             }
 
             deleteCommand = View.OnClickListener {

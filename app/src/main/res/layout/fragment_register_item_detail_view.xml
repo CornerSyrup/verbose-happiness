@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="total"
+            type="Integer" />
+
+        <variable
+            name="categoryString"
+            type="String" />
+
+        <variable
+            name="model"
+            type="jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem" />
+
+        <variable
+            name="duplicateCommand"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="editCommand"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="deleteCommand"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_edt"
+                android:drawableStart="@drawable/ic_fluent_copy_add_24_regular"
+                android:onClick="@{duplicateCommand}" />
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_edt"
+                android:drawableStart="@drawable/ic_fluent_edit_24_regular"
+                android:onClick="@{editCommand}" />
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_del"
+                android:drawableStart="@drawable/ic_fluent_delete_24_regular"
+                android:onClick="@{deleteCommand}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextAppearance.FluentUI.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{Integer.toString(position)}"
+                    tools:text="1" />
+
+                <TextView
+                    style="@style/TextAppearance.FluentUI.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/common_date_separator" />
+
+                <TextView
+                    style="@style/TextAppearance.FluentUI.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{Integer.toString(total)}"
+                    tools:text="5" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.SubHeading1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_lbl_date" />
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:day="@{model.day}"
+                app:month="@{model.month}"
+                app:year="@{model.year}"
+                tools:text="2022 / 12 / 31" />
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.SubHeading1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_lbl_cat" />
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{categoryString}"
+                tools:text="Others" />
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.SubHeading1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/detail_lbl_amount" />
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{Float.toString(model.amount)}"
+                tools:text="1234" />
+
+            <TextView
+                style="@style/TextAppearance.FluentUI.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{model.flow ? `Income` : `Expense`}"
+                tools:text="Income" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

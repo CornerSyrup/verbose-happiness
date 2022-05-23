@@ -5,7 +5,7 @@ import androidx.navigation.findNavController
 
 class HomePageViewModel {
     fun navigateToRegisterPage(view: View) {
-        view.findNavController().navigate(HomePageDirections.actionHomeToRegister(0))
+        view.findNavController().navigate(HomePageDirections.actionHomeToRegister())
     }
 
     fun navigateToDetailPage(view: View) {

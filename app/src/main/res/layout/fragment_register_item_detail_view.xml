@@ -23,6 +23,10 @@
             type="jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem" />
 
         <variable
+            name="duplicateCommand"
+            type="android.view.View.OnClickListener" />
+
+        <variable
             name="editCommand"
             type="android.view.View.OnClickListener" />
 
@@ -47,7 +51,15 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:contentDescription="@string/detail_btn_edt"
-                android:drawableStart="@drawable/ic_fluent_edit_24_filled"
+                android:drawableStart="@drawable/ic_fluent_copy_add_24_regular"
+                android:onClick="@{duplicateCommand}" />
+
+            <com.microsoft.fluentui.widget.Button
+                style="@style/Widget.FluentUI.Button.Borderless"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/detail_btn_edt"
+                android:drawableStart="@drawable/ic_fluent_edit_24_regular"
                 android:onClick="@{editCommand}" />
 
             <com.microsoft.fluentui.widget.Button
@@ -55,7 +67,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:contentDescription="@string/detail_btn_del"
-                android:drawableStart="@drawable/ic_fluent_delete_24_filled"
+                android:drawableStart="@drawable/ic_fluent_delete_24_regular"
                 android:onClick="@{deleteCommand}" />
         </LinearLayout>
 

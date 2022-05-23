@@ -30,4 +30,6 @@
     <string name="detail_lbl_cat">分類</string>
     <string name="btn_desc_detail">項目を確認</string>
     <string name="detail_btn_edt">編集</string>
+    <string name="register_btn_dup">複製</string>
+    <string name="register_btn_edt">編集</string>
 </resources>

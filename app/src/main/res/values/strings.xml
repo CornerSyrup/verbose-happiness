@@ -25,4 +25,5 @@
     <string name="detail_lbl_date">Date</string>
     <string name="detail_lbl_cat">Category</string>
     <string name="detail_lbl_amount">Amount</string>
+    <string name="register_btn_cfm">Confirm</string>
 </resources>

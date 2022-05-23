@@ -41,7 +41,7 @@ class RegisterPageViewModel(val model: RegisterItem) : BaseObservable() {
 
     fun register(view: View) {
         RegisteredItemDb.getRegisterItemDb()?.registerItemDao()?.insert(model)
-        view.findNavController().navigate(RegisterPageDirections.actionRegisterToHome())
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterPageToDetailPage())
     }
 
     fun cancel(view: View) {

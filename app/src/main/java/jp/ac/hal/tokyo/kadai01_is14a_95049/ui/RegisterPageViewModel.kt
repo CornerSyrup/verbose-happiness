@@ -7,7 +7,6 @@ import androidx.databinding.Bindable
 import androidx.navigation.findNavController
 import com.microsoft.fluentui.datetimepicker.DateTimePickerDialog
 import jp.ac.hal.tokyo.kadai01_is14a_95049.BR
-import jp.ac.hal.tokyo.kadai01_is14a_95049.R
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisterItem
 import jp.ac.hal.tokyo.kadai01_is14a_95049.data.RegisteredItemDb
 import org.threeten.bp.Duration
@@ -42,11 +41,11 @@ class RegisterPageViewModel(val model: RegisterItem) : BaseObservable() {
 
     fun register(view: View) {
         RegisteredItemDb.getRegisterItemDb()?.registerItemDao()?.insert(model)
-        view.findNavController().navigate(R.id.action_register_to_home)
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterToHome())
     }
 
     fun cancel(view: View) {
-        view.findNavController().navigate(R.id.action_register_to_home)
+        view.findNavController().navigate(RegisterPageDirections.actionRegisterToHome())
     }
 
     /**

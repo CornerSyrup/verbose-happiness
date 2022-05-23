@@ -29,4 +29,5 @@
     <string name="detail_lbl_date">日付</string>
     <string name="detail_lbl_cat">分類</string>
     <string name="btn_desc_detail">項目を確認</string>
+    <string name="detail_btn_edt">編集</string>
 </resources>

@@ -19,6 +19,7 @@
 
     <!-- For detail page -->
     <string name="detail_btn_del">delete item</string>
+    <string name="detail_btn_edt">edit item</string>
     <string name="detail_lbl_date">Date</string>
     <string name="detail_lbl_cat">Category</string>
     <string name="detail_lbl_amount">Amount</string>

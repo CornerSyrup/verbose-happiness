@@ -38,7 +38,7 @@ android {
 
 dependencies {
     implementation 'com.microsoft.design:fluent-system-icons:1.1.169@aar'
-    implementation 'com.microsoft.fluentui:FluentUIAndroid:0.1.0'
+    implementation 'com.microsoft.fluentui:FluentUIAndroid:0.1.11'
 
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
